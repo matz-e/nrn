@@ -94,7 +94,7 @@ void oc_restore_cabcode(int* a1, int* a2)
 	section_object_seen = *a2;
 }
 
-void nrn_pushsec(Section* sec)
+extern "C" void nrn_pushsec(Section* sec)
 {
 	isecstack++;
 	if (isecstack >= NSECSTACK) {
@@ -119,7 +119,7 @@ void nrn_pushsec(Section* sec)
 	}
 }
 
-void nrn_popsec(void) {
+extern "C" void nrn_popsec(void) {
 	if (isecstack > 0) {
 		Section* sec = secstack[isecstack--];
 		if (!sec) {
@@ -431,7 +431,7 @@ void nrn_chk_section(Symbol* s)
 	}
 }
 
-Section* chk_access(void)
+extern "C" Section* chk_access(void)
 {
 	Section* sec = secstack[isecstack];
 	if (!sec || !sec->prop) {

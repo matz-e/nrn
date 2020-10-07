@@ -61,7 +61,7 @@ void nrn_prcellstate(int gid, const char *suffix) {}
 /*ARGSUSED*/
 void hoc_construct_point(Object *ob, int i) {}
 
-void nrn_random_play() {}
+extern "C" void nrn_random_play() {}
 
 extern "C" void *nrn_random_arg(int i)
 {
@@ -139,11 +139,11 @@ extern "C" int at_time(NrnThread *nt, double te) {
 
 extern "C" void net_event() { hoc_execerror("net_event only available in nrniv", (char *) 0); }
 
-void net_send() { hoc_execerror("net_send only available in nrniv", (char *) 0); }
+extern "C" void net_send() { hoc_execerror("net_send only available in nrniv", (char *) 0); }
 
 void artcell_net_send() { hoc_execerror("net_send only available in nrniv", (char *) 0); }
 
-void net_move() { hoc_execerror("net_move only available in nrniv", (char *) 0); }
+extern "C" void net_move() { hoc_execerror("net_move only available in nrniv", (char *) 0); }
 
 extern "C" void artcell_net_move() { hoc_execerror("net_move only available in nrniv", (char *) 0); }
 
@@ -170,7 +170,7 @@ double x;
 {
 }
 
-void clear_event_queue() {}
+extern "C" void clear_event_queue() {}
 
 void init_net_events() {}
 

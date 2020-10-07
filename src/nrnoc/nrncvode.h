@@ -5,19 +5,19 @@
 //extern "C" {
 //#endif
 
-extern void cvode_fadvance(double);
+extern "C" void cvode_fadvance(double);
 extern void cvode_finitialize(double);
 extern void nrncvode_set_t(double);
 extern void deliver_net_events(NrnThread*);
 extern void nrn_deliver_events(NrnThread*);
-extern void clear_event_queue(void);
+extern "C" void clear_event_queue(void);
 extern void init_net_events(void);
 extern void nrn_record_init(void);
 extern void nrn_play_init(void);
 extern void fixed_record_continuous(NrnThread* nt);
 extern void fixed_play_continuous(NrnThread* nt);
 extern void nrn_solver_prepare(void);
-extern void nrn_random_play(/*NrnThread**/); // TODO nrnthread fn?
+extern "C" void nrn_random_play(/*NrnThread**/); // TODO nrnthread fn?
 extern void nrn_daspk_init_step(double, double, int);
 extern void nrndae_init(void);
 extern void nrndae_update(void);

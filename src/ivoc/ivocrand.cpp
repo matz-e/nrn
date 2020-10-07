@@ -40,9 +40,8 @@
 #undef dmaxuint
 #define dmaxuint 4294967295.
 
-//extern "C" {
-    void nrn_random_play();
-//} // extern "C"
+extern "C" void nrn_random_play();
+
 class RandomPlay : public Observer, public Resource {
 public:
 	RandomPlay(Rand*, double*);
@@ -582,7 +581,7 @@ static double r_play(void* r){
 	return 0.;
 }
 
-void nrn_random_play() {
+extern "C" void nrn_random_play() {
 	long i, cnt = random_play_list_->count();
 	for (i=0; i < cnt; ++i) {
 		random_play_list_->item(i)->play();

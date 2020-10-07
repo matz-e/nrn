@@ -21,16 +21,12 @@ extern double nrn_ion_charge(Symbol*);
 extern "C" {
 #endif
 extern Point_process *ob2pntproc(Object *);
-#if defined(__cplusplus)
-}
-#endif
-
 extern Point_process* ob2pntproc_0(Object*);
 
 
 
 
-extern void nrn_net_move(void**, Point_process*, double);
+
 
 extern double* _getelm(int, int);
 extern double* _nrn_thread_getelm(void*, int, int);
@@ -53,11 +49,6 @@ extern int _ss_derivimplicit(int, int, int*, int*, double*, double*, double,
   int(*)(), double**);
 extern int _ss_derivimplicit_thread(int, int*, int*, double*,
    int(*)(double*, union Datum*, union Datum*, struct NrnThread*), void*, void*, void*);
-
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
 
 extern int euler_thread(int, int*, int*, double*,
                         int(*)(double*, union Datum*, union Datum*, struct NrnThread*), union Datum*, union Datum*, struct NrnThread*);
@@ -106,7 +97,7 @@ extern pnt_receive_init_t* pnt_receive_init;
 extern short* pnt_receive_size;
 extern void nrn_net_send(void**, double*, Point_process*, double, double);
 extern void nrn_net_event(Point_process*, double);
-
+extern void nrn_net_move(void**, Point_process*, double);
 
 #if defined(__cplusplus)
 }

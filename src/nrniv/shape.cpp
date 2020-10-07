@@ -50,7 +50,7 @@
 	extern int section_count;
 	extern Section** secorder;
 	extern "C" Point_process* ob2pntproc(Object*);
-	extern Point_process* ob2pntproc_0(Object*);
+	extern "C" Point_process* ob2pntproc_0(Object*);
 	extern "C" double* nrn_recalc_ptr(double*);
 	extern Object* (*nrnpy_seg_from_sec_x)(Section*, double);
 //} // extern "C"

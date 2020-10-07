@@ -212,7 +212,7 @@ static int Getc(NrnFILEWrap* fp);
 static void unGetc(int c, NrnFILEWrap* fp);
 static int backslash(int c);
 
-void nrn_exit(int i) {
+extern "C" void nrn_exit(int i) {
 #if defined(WIN32)
 	printf("NEURON exiting abnormally, press return to quit\n");
 	fgetc(stdin);

@@ -77,7 +77,7 @@ void hoc_construct_point(Object* ob, int narg) {
 	}
 }
 
-Point_process* ob2pntproc_0(Object* ob) {
+extern "C" Point_process* ob2pntproc_0(Object* ob) {
 	Point_process* pp;
 	if (ob->ctemplate->steer) {
 		pp = (Point_process*)ob->u.this_pointer;
