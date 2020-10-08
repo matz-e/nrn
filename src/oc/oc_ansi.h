@@ -280,6 +280,7 @@ extern void hoc_free_allobjects(cTemplate*, Symlist*, Objectdata*);
 //#endif
 
 extern int nrn_is_cable(void);
+extern int nrn_isdouble(double*, double, double);
 
 #if defined(__cplusplus)
 }
@@ -288,7 +289,6 @@ extern int nrn_is_cable(void);
 extern int hoc_main1(int, const char**, const char**);
 extern char* cxx_char_alloc(size_t size);
 extern int stoprun;
-extern int nrn_isdouble(double*, double, double);
 
 #endif
 

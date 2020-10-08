@@ -12,7 +12,7 @@ so it can only be used when pd is valid over sizeof(double).
 //extern "C" {
 //#endif
 
-int nrn_isdouble(double *pd, double min, double max) {
+extern "C" int nrn_isdouble(double *pd, double min, double max) {
     int i;
     if (!pd) { return 0; }
 #if defined(fpclassify)
