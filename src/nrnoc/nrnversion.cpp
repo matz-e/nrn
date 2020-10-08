@@ -7,9 +7,6 @@
 #include <assert.h>
 #include "nrnassrt.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern int nrn_global_argc;
 extern char** nrn_global_argv;
@@ -79,7 +76,4 @@ char *nrn_version(int i) {
     return buf;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 

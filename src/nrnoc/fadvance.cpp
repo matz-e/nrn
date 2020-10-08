@@ -13,9 +13,6 @@
 #include "nrncvode.h"
 #include "spmatrix.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 /*
  after an fadvance from t-dt to t, v is defined at t
@@ -1113,6 +1110,3 @@ extern "C" int euler_thread(int neqn, int *var, int *der, double *p,
     return (SUCCESS);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

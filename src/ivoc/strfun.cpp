@@ -15,11 +15,9 @@
 #if HAVE_IV
 #include <ocbox.h>
 #endif
-//extern "C" {
 extern Objectdata* hoc_top_level_data;
 extern Symlist* hoc_built_in_symlist;
 extern int nrn_is_artificial(int);
-//} // extern "C"
 
 extern /*"C"*/ int hoc_return_type_code;
 
@@ -98,7 +96,6 @@ static double l_is_name(void*) {
 }
 
 
-//extern "C" {
 extern void hoc_free_symspace(Symbol*);
 extern Object* hoc_newobj1(Symbol*, int);
 extern Symlist* hoc_top_level_symlist;
@@ -116,7 +113,6 @@ extern void ivoc_free_alias(Object* ob) {
 	if (a) delete a;
 }
 
-//} // extern "C"
 
 static double l_alias(void*) {
 	char* name;

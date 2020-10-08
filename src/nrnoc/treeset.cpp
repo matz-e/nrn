@@ -17,9 +17,6 @@
 #include "nonvintblock.h"
 #include "nrndae_c.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern spREAL *spGetElement(char*, int ,int);
 
@@ -2268,6 +2265,3 @@ void nrn_recalc_node_ptrs(void) {
 
 #endif /* CACHEVEC */
 
-//#if defined(__cplusplus)
-//}
-//#endif

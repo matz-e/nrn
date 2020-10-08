@@ -8,14 +8,12 @@
 #include	"nonvintblock.h"
 
 typedef int (*Pfridot)(...);
-//extern "C" {
 
 #include	"membfunc.h"
 #include	"neuron.h"
 
 extern int	diam_changed;
 extern int	tree_changed;
-//} // extern "C"
 
 void Cvode::rhs(NrnThread* _nt) {
 	int i;

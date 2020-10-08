@@ -28,7 +28,6 @@
 #if NRNLONGSGID
 #define sgid_t int64_t
 #if PARANEURON
-//extern "C" {
   extern void sgid_alltoallv(sgid_t* s, int* scnt, int* sdispl, sgid_t* r, int* rcnt, int* rdispl)
   {
     if (nrn_sparse_partrans > 0)
@@ -38,12 +37,10 @@
       nrnmpi_long_alltoallv(s, scnt, sdispl, r, rcnt, rdispl);
     }
   }
-//} // extern "C"
 #endif //PARANEURON
 #else // not NRNLONGSGID
 #define sgid_t int
 #if PARANEURON
-//extern "C" {
   extern void sgid_alltoallv(sgid_t* s, int* scnt, int* sdispl, sgid_t* r, int* rcnt, int* rdispl)
   {
     if (nrn_sparse_partrans > 0)
@@ -53,11 +50,9 @@
       nrnmpi_int_alltoallv(s, scnt, sdispl, r, rcnt, rdispl);
     }
   }
-//} // extern "C"
 #endif //PARANEURON
 #endif // not NRNLONGSGID
 
-//extern "C" {
 void nrnmpi_source_var();
 void nrnmpi_target_var();
 void nrnmpi_setup_transfer();
@@ -160,7 +155,6 @@ extern void nrnmpi_int_alltoallv(int*, int*, int*,  int*, int*, int*);
 extern void nrnmpi_dbl_alltoallv(double*, int*, int*,  double*, int*, int*);
 extern void nrnmpi_dbl_alltoallv_sparse(double*, int*, int*,  double*, int*, int*);
 #endif
-//} // extern "C"
 
 struct TransferThreadData {
 	int cnt;
@@ -1041,9 +1035,7 @@ void pargap_jacobi_rhs(double* b, double* x) {
   }
 }
 
-//extern "C" {
 extern size_t nrnbbcore_gap_write(const char* path, int* group_ids);
-//} // extern "C"
 
 /*
   file format for <path>/<group_id>_gap.dat

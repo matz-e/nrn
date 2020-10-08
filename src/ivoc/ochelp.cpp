@@ -29,10 +29,8 @@ static FILE* help_pipe;
 //#include "../uxnrnbbs/nrnbbs.h"
 #endif
 
-//extern "C" {
 //extern void ivoc_help(const char*);
 extern const char* hoc_current_xopen();
-//} // extern "C";
 
 declareList(CopyStringList, CopyString)
 implementList(CopyStringList, CopyString)

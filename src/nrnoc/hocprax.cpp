@@ -300,6 +300,3 @@ static double efun(double* v, int n)
 	return err;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

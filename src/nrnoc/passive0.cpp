@@ -5,9 +5,6 @@
 #include	"membdef.h"
 #include	"nrniv_mf.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 #define	nparm 2
@@ -73,6 +70,3 @@ static void pas_alloc(Prop* p)
 	p->param = pd;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

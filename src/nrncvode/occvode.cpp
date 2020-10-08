@@ -12,7 +12,6 @@
 #include "membfunc.h"
 #include "nonvintblock.h"
 typedef int (*Pfridot)(...);
-//extern "C" {
 extern void setup_topology(), v_setup_vectors();
 extern void nrn_mul_capacity(NrnThread*, Memb_list*);
 extern void nrn_div_capacity(NrnThread*, Memb_list*);
@@ -47,7 +46,6 @@ extern void nrn_multisplit_adjust_rhs(NrnThread*);
 #if PARANEURON
 extern void (*nrn_multisplit_solve_)();
 #endif
-//} // extern "C";
 
 static Symbol* vsym; // for absolute tolerance
 #define SETUP 1
@@ -451,9 +449,7 @@ double* Cvode::n_vector_data(N_Vector v, int tid) {
 	return N_VGetArrayPointer(v);
 }
 
-//extern "C" {
 extern void nrn_extra_scatter_gather(int, int);
-//} // extern "C"
 
 void Cvode::scatter_y(double* y, int tid){
 	int i;

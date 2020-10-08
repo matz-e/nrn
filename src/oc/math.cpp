@@ -9,9 +9,6 @@
 #include "ocfunc.h"
 # include	"hoc.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #define EPS hoc_epsilon
 #define MAXERRCOUNT 5
@@ -177,6 +174,3 @@ fprintf(stderr, "No more errno warnings during this execution\n");
 #endif
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

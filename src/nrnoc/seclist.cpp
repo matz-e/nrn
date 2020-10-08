@@ -267,9 +267,6 @@ static Member_func members[] = {
 	0,0
 };
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern void class2oc(const char *,
                      void *(*cons)(Object *),
@@ -279,9 +276,6 @@ extern void class2oc(const char *,
                      Member_ret_obj_func *,
                      Member_ret_str_func *);
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 void SectionList_reg(void) {
 /*	printf("SectionList_reg\n");*/

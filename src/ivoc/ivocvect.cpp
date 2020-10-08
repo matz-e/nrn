@@ -35,9 +35,7 @@
 #endif
 
 #if defined(SVR4)
-//extern "C" {
-    extern void exit(int status);
-//} // extern "C";
+extern void exit(int status);
 #endif
 
 #include "classreg.h"
@@ -49,10 +47,8 @@
 
 #include "gui-redirect.h"
 
-//extern "C" {
-	extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
-	extern double (*nrnpy_object_to_double_)(Object*);
-//} // extern "C"
+extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
+extern double (*nrnpy_object_to_double_)(Object*);
 
 #ifndef PI
 #ifndef M_PI
@@ -106,24 +102,20 @@ static double dmaxint_;
 #include "parse.h"
 #include "ocfile.h"
 
-//extern "C" {
 extern Object* hoc_thisobject;
 extern Symlist* hoc_top_level_symlist;
 extern "C" void nrn_exit(int);
 IvocVect* (*nrnpy_vec_from_python_p_)(void*);
 Object** (*nrnpy_vec_to_python_p_)(void*);
 Object** (*nrnpy_vec_as_numpy_helper_)(int, double*);
-//} // extern "C";
 
 
 int cmpfcn(double a, double b) { return ((a) <= (b))? (((a) == (b))? 0 : -1) : 1; }
 
 
 // math functions with error checking defined in oc/SRC/math.cpp
-//extern "C" {
-  extern double hoc_Log(double x), hoc_Log10(double x), /*hoc_Exp(double x), */hoc_Sqrt(double x);
-  extern double hoc_scan(FILE*);
-//} // extern "C"
+extern double hoc_Log(double x), hoc_Log10(double x), /*hoc_Exp(double x), */hoc_Sqrt(double x);
+extern double hoc_scan(FILE*);
 
 extern "C" {
     extern double hoc_Exp(double);
@@ -304,9 +296,7 @@ void vector_append(Vect* v, double x){
 #ifdef WIN32
 #if !defined(USEMATRIX) || USEMATRIX == 0
 #include "../windll/dll.h"
-//extern "C" {
-    extern char* neuron_home;
-//} // extern "C"
+extern char* neuron_home;
 
 void load_ocmatrix() {
 	struct DLL* dll = NULL;
@@ -3759,9 +3749,7 @@ static Member_ret_str_func v_retstr_members[] = {
 	0,0
 };
 
-//extern "C" {
 extern int hoc_araypt(Symbol*, int);
-//} // extern "C"
 
 int ivoc_vector_size(Object* o) {
 	Vect* vp = (Vect*)o->u.this_pointer;

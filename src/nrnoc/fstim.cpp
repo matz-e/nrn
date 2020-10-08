@@ -27,9 +27,6 @@ fstimi(i)
 #include "section.h"
 #include "nrniv_mf.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 typedef struct Stimulus {
     double loc;    /* parameter location (0--1) */
@@ -170,6 +167,3 @@ void activstim_rhs(void) {
     }
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

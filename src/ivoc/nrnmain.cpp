@@ -6,7 +6,6 @@
 #include <errno.h>
 #include "isoc99.h"
 
-//extern "C" {
 	extern "C" int nrn_isdouble(double*, double, double);
 	extern int ivocmain(int, const char**, const char**);
 	extern int nrn_main_launch;
@@ -23,7 +22,6 @@ extern "C" void nrnmpi_init(int nrnmpi_under_nrncontrol, int* pargc, char*** par
 	// note: get the path from the environment variable BGL_CHKPT_DIR_PATH
 	// otherwise from $HOME/checkpoint, otherwise $HOME
 #endif	
-//} // extern "C"
 
 int main(int argc, char** argv, char** env) {
 	nrn_isdouble(0,0,0);
@@ -64,9 +62,7 @@ printf("argv[%d]=|%s|\n", i, argv[i]);
 }
 
 #if USENCS
-//extern "C" {
 void nrn2ncs_outputevent(int, double){}
-//} // extern "C"
 #endif
 
 // moving following to src/oc/ockludge.cpp since on

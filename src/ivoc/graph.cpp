@@ -49,10 +49,8 @@ extern Image* gif_image(const char*);
 #include "classreg.h"
 #include "gui-redirect.h"
 
-//extern "C" {
-	extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
-	extern double (*nrnpy_object_to_double_)(Object*);
-//} // extern "C"
+extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
+extern double (*nrnpy_object_to_double_)(Object*);
 
 #if HAVE_IV  
 #define Graph_Crosshair_		"Crosshair Graph"
@@ -1597,7 +1595,6 @@ void Graph::draw(Canvas* c, const Allocation& a) const {
 	long i, cnt = line_list_.count();
 //if (!extension_flushed_) {
 	Scene::draw(c, a);
-//} // extern "C"
 	if (extension_flushed_) {
 		for (i = 0; i < cnt; ++i) {
 			line_list_.item(i)->extension()->draw(c, a);
@@ -1930,9 +1927,7 @@ hoc_execerror(expr, "is invalid left hand side of assignment statement");
 	}
 }
 
-//extern "C" {
-    extern int hoc_execerror_messages;
-//} // extern "C"
+extern int hoc_execerror_messages;
 void Graph::begin() {
 	if (keep_lines_toggle_->test(TelltaleState::is_chosen)) {
 		keep_lines();

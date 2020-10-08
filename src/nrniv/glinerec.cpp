@@ -8,12 +8,10 @@
 // point processes.
 // Note: cvode.simgraph_remove() deletes all the GLineRecord instances.
 
-//extern "C" {
 #include "hocparse.h"
 #include "code.h"
 #undef begin
 #undef add
-//} // extern "C"
 
 #include <OS/list.h>
 #include "nrnoc2iv.h"
@@ -26,9 +24,7 @@
 #include "glinerec.h"
 #include "ocjump.h"
 
-//extern "C" {
 extern NetCvode* net_cvode_instance;
-//} // extern "C";
 
 class GLineRecordList;
 

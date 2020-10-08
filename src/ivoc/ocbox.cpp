@@ -26,10 +26,8 @@
 
 extern /*"C"*/ int hoc_return_type_code;
 
-//extern "C" {
-	extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
-	extern double (*nrnpy_object_to_double_)(Object*);
-//} // extern "C";
+extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
+extern double (*nrnpy_object_to_double_)(Object*);
 
 #if HAVE_IV
 
@@ -337,9 +335,7 @@ ENDGUI
 	return 0.;
 }
 
-//extern "C" {
-    const char* pwm_session_filename();
-//} // extern "C"
+const char* pwm_session_filename();
 
 static double save(void* v) {
 	TRY_GUI_REDIRECT_ACTUAL_DOUBLE("Box.save", v);

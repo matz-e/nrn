@@ -11,9 +11,6 @@
 #include "nrnfilewrap.h"
 #include <nrnpython_config.h>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 #define PDEBUG 0
@@ -2164,6 +2161,3 @@ int is_obj_type(Object* obj, const char* type_name) {
 }
 
 
-//#if defined(__cplusplus)
-//}
-//#endif

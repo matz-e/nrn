@@ -110,17 +110,11 @@ fmenu.c,v
 #endif
 
 #if OCSMALL
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 void hoc_fmenu(void) {
 	hoc_ret(); hoc_pushx(0.);
 }
 hoc_menu_cleanup() {
 }
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 #else
 #if defined(__GO32__)
 #define G32 1
@@ -239,9 +233,6 @@ static void menu_manager(int nmenu) {
 	current_menu = previous;
 }
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 void hoc_fmenu(void) {
     int imenu, flag, i, narg;
 #ifdef WIN32
@@ -314,9 +305,6 @@ void hoc_fmenu(void) {
     }
     Ret (0.);
 }
-//#if defined(__cplusplus)
-//}
-//#endif
 
 static void xcursor(int r, int c){
 #if DOS
@@ -733,9 +721,6 @@ static void undisplay(int imenu) {
 		clrscr();
 	}
 }
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 void hoc_menu_cleanup(void) {
     current_menu = -1;
@@ -747,8 +732,5 @@ void hoc_menu_cleanup(void) {
 #endif
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif /*OCSMALL*/

@@ -31,9 +31,6 @@ double nrn_time(void)
 }
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 void hoc_startsw(void) {
     Ret(nrn_time());
@@ -60,9 +57,6 @@ void hoc_stopsw(void) {
 #endif
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 double nrn_timeus(void)
 {

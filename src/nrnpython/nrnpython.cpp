@@ -11,7 +11,6 @@
 #include <string>
 #include <ocfile.h> // bool isDirExist(const std::string& path);
 
-//extern "C" {
 #include <hocstr.h>
 extern "C" void nrnpython_real();
 extern "C" void nrnpython_start(int);
@@ -45,7 +44,6 @@ extern char** nrn_global_argv;
 #if NRNPYTHON_DYNAMICLOAD
 int nrnpy_site_problem;
 #endif
-//} // extern "C"
 
 extern "C" {
 extern void rl_stuff_char(int);

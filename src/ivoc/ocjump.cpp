@@ -13,7 +13,6 @@
 #include "ivoc.h"
 #endif
 
-//extern "C" {
 extern Objectdata* hoc_top_level_data;
 extern Symlist* hoc_top_level_symlist;
 extern Symlist* hoc_symlist;
@@ -21,7 +20,6 @@ extern Object* hoc_thisobject;
 extern void hoc_execute1();
 extern bool hoc_valid_stmt(const char* stmt, Object* ob);
 extern int hoc_execerror_messages;
-//} // extern "C"
 
 static bool valid_stmt1(const char* stmt, Object* ob) {
 	char* s = new char[strlen(stmt)+2];
@@ -168,9 +166,7 @@ void OcJumpImpl::ljmp() {
 
 OcJumpImpl* OcJumpImpl::oji_;
 
-//extern "C" {
-	void hoc_execute(Inst*);
-//} // extern "C"
+void hoc_execute(Inst*);
 
 bool OcJumpImpl::execute(Inst* p) {
 	begin();

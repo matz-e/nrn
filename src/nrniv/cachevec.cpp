@@ -20,11 +20,9 @@
 #include <ocpointer.h>
 #include <ocptrvector.h>
 
-//extern "C" {
 void nrniv_recalc_ptrs();
 extern "C" double* nrn_recalc_ptr(double*);
 extern NetCvode* net_cvode_instance;
-//} // extern "C"
 
 extern void nrn_linmod_update_ptrs(void*);
 extern void nrn_partrans_update_ptrs();

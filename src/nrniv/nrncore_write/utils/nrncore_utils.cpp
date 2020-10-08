@@ -18,7 +18,6 @@
 #include <dlfcn.h>
 #endif
 
-//extern "C" {
 
 extern bool corenrn_direct;
 extern int diam_changed, v_structure_change, tree_changed;
@@ -255,4 +254,3 @@ void check_coreneuron_compatibility(void* handle) {
 
 #endif //!HAVE_DLFCN_H
 
-//} // extern "C"

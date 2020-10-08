@@ -39,9 +39,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <mach-o/dyld.h>
 #include "osxdlfcn.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #define ERR_STR_LEN 256
 
@@ -215,6 +212,3 @@ void *dlsym(void *handle, const char *symbol) {
     return value;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

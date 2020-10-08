@@ -7,9 +7,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <InterViews/resource.h>
-//extern "C" {
 #include "spmatrix.h"
-//} // extern "C"
 #include "nrnoc2iv.h"
 #include "cvodeobj.h"
 #include "nrndaspk.h"
@@ -29,7 +27,6 @@ static int solve_state_;
 
 double Daspk::dteps_;
 
-//extern "C" {
 	
 extern void nrndae_dkres(double*, double*, double*);
 extern void nrndae_dkpsol(double);
@@ -69,7 +66,6 @@ static int msolve(IDAMem mem, N_Vector b, N_Vector ycur, N_Vector ypcur,
 
 static int mfree(IDAMem);
 
-//} // extern "C"
 
 
 // at least in DARWIN the following is already declared so avoid conflict

@@ -194,7 +194,6 @@ static void bbss_early(double td, TQItem* tq);
 
 typedef void (*ReceiveFunc)(Point_process*, double*, double);
 
-//extern "C" {
 #include "membfunc.h"
 extern int section_count;
 extern void nrn_shape_update();
@@ -352,7 +351,6 @@ extern "C" void bbss_restore_done(void* bbss);
 // some extra setting up and cleanup.
 // when this call returns, bbss will be invalid.
 
-//} // extern "C";
 
 
 // 0 no debug, 1 print to stdout, 2 read/write to IO file

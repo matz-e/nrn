@@ -5,9 +5,6 @@
 #include	"membdef.h"
 #include	"nrniv_mf.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 static const char *mechanism[] = {"0", "capacitance", "cm", 0, "i_cap", 0, 0};
 static void cap_alloc(Prop *);
@@ -150,6 +147,3 @@ static void cap_alloc(Prop *p) {
 }
 
 
-//#if defined(__cplusplus)
-//}
-//#endif

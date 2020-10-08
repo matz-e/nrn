@@ -6,9 +6,6 @@
 #include "hoc.h"
 #include "gui-redirect.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
 extern double (*nrnpy_object_to_double_)(Object*);
@@ -75,8 +72,5 @@ void hoc_Lw(void)
 	pushx(0.);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif /*!defined(CYGWIN)*/

@@ -7,9 +7,6 @@
 #include	"nrniv_mf.h"
 #include	"hocassrt.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern int cvode_active_;
 extern int nrn_use_daspk_;
@@ -60,9 +57,6 @@ static int _ode_count(int type) {
 	return 0;
 }
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern "C" void extracell_reg_(void) {
     int i;
@@ -74,9 +68,6 @@ extern "C" void extracell_reg_(void) {
     hoc_register_units(i, units);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 /* solving is done with sparse13 */
 
@@ -673,6 +664,3 @@ ndesave[i].rhs[j] -= ndesave[i].v[k]*ndesave[i].m[j][(nlayer)+k-j];
 
 #endif /*EXTRACELLULAR*/
 
-//#if defined(__cplusplus)
-//}
-//#endif

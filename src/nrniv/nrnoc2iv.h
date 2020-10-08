@@ -4,9 +4,7 @@
 
 #include "oc2iv.h"
 
-//extern "C" {
 #include "section.h"
-//} // extern "C"
 
 #include "ndatclas.h"
 

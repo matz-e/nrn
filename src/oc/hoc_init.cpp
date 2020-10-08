@@ -8,9 +8,6 @@
 
 #include "ocfunc.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern void hoc_nrnmpi_init();
 
@@ -398,6 +395,3 @@ void hoc_Execerror(void) {
 	/* never get here */
 }
 //
-//#if defined(__cplusplus)
-//}
-//#endif

@@ -2,7 +2,6 @@
 #define NRN_NRNCORE_UTILS_H
 
 #include <string>
-//extern "C" {
 
 class NrnThread;
 
@@ -22,7 +21,6 @@ void check_coreneuron_compatibility(void* handle);
 
 #endif
 
-//} // extern "C"
 
 #endif //NRN_NRNCORE_UTILS_H
 

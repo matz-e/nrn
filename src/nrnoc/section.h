@@ -24,9 +24,6 @@
    d and rhs is calculated from the property list.
 */
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #include "nrnredef.h"
 #include "options.h"
@@ -336,9 +333,6 @@ extern int stoprun;
 /* of any hoc call for integration and before returning to hoc */
 
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #include "nrn_ansi.h"
 

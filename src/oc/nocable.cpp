@@ -9,9 +9,6 @@ void nrn_fake_step(void) {}
 #endif
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 int stoprun;
 void clear_sectionlist(void) {}
@@ -69,9 +66,6 @@ void nrn_hoc_lock(void) {}
 void nrn_hoc_unlock(void) {}
 
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #include "nrnmpiuse.h"
 #if NRN_MUSIC

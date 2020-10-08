@@ -12,7 +12,6 @@
 class Cvode;
 #endif
 
-//extern "C" {
 extern "C" void cvode_fadvance(double);
 void cvode_finitialize(double t0);
 void nrncvode_set_t(double);
@@ -36,7 +35,6 @@ void fixed_record_continuous(NrnThread* nt);
 void fixed_play_continuous(NrnThread* nt);
 void nrn_solver_prepare();
 static void check_thresh(NrnThread*);
-//} // extern "C"
 
 // for fixed step thread
 void deliver_net_events(NrnThread* nt) {

@@ -6,9 +6,7 @@
 #include "ocmatrix.h"
 #include "classreg.h"
 #include "singlech.h"
-//extern "C" {
 #include "membfunc.h"
-//} // extern "C"
 #include "random1.h"
 #include "NegExp.h"
 
@@ -90,7 +88,6 @@ void SingleChanState::rate(int to_state, double value) {
 	++n_;
 }
 
-//extern "C" { // bug in cray compiler. But it cant hurt.
 void hoc_reg_singlechan(int type, void (*f)(...)){
 	if (!infolist) {
 		infolist = new SingleChanInfoList();
@@ -112,7 +109,6 @@ void _singlechan_declare(void (*f)(double, double*, Datum*), int* slist, int n) 
 	info->slist_ = slist;
 	info->n_ = n;
 }
-//} // extern "C"
 
 void _nrn_single_react(int i, int j, double rate) {
 //	printf("_nrn_single_react %d %d %g\n", i, j, rate);

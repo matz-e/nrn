@@ -8,7 +8,6 @@
 #define M_PI (3.14159265358979323846)
 #endif
 
-//extern "C" {
 #include <membfunc.h>
 #include <parse.h>
 extern void nrn_pt3dremove(Section* sec, int i0);
@@ -2462,4 +2461,3 @@ void nrnpy_unreg_mech(int type) {
   // not implemented but needed when KSChan name changed.
 }
 
-//} // extern "C"

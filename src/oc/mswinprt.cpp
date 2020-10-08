@@ -17,9 +17,6 @@
 
 #include "gui-redirect.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
 extern double (*nrnpy_object_to_double_)(Object*);
@@ -389,6 +386,3 @@ void hoc_Lw(){ret(); pushx(0.);}
 Fig_file(){}
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif

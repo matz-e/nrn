@@ -9,9 +9,6 @@
 #include	"nrniv_mf.h"
 #include        "parse.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #define nt_t nrn_threads->_t
 #define nt_dt nrn_threads->_dt
@@ -544,6 +541,3 @@ for (i=0; i < n; ++i) { double a,b;
 	}
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

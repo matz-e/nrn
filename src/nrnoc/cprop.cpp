@@ -10,9 +10,6 @@ greater cache efficiency
 #include <section.h>
 #include <stdlib.h>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 void nrn_mk_prop_pools(int n) {}
 
@@ -52,7 +49,4 @@ void nrn_section_free(Section *s) {
     free(s);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 

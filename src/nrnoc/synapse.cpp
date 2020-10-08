@@ -40,9 +40,6 @@ fsyng(i)
 #include "nrniv_mf.h"
 #include <math.h>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 #define nt_t nrn_threads->_t
@@ -226,6 +223,3 @@ void activsynapse_lhs() {
     }
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

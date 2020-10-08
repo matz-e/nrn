@@ -8,9 +8,6 @@
 
 #include "gui-redirect.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
 extern double (*nrnpy_object_to_double_)(Object*);
@@ -150,6 +147,3 @@ hoc_menu_cleanup() {
 
 initplot() {}
 
-//#if defined(__cplusplus)
-//}
-//#endif

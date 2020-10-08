@@ -4,11 +4,9 @@
 
 #include "nrnmpi.h"
 
-//extern "C" {
 extern "C" void cvode_fadvance();
 void cvode_finitialize();
 extern void (*nrn_multisplit_setup_)();
-//} // extern "C"
 
 extern /*"C"*/ int hoc_return_type_code;
 
@@ -49,7 +47,6 @@ static MUTDEC
 #include "ida/ida.h"
 #include "nonvintblock.h"
 
-//extern "C" {
 extern double dt, t;
 #define nt_dt nrn_threads->_dt
 #define nt_t nrn_threads->_t
@@ -148,9 +145,7 @@ static double queue_mode(void* v) {
 	return 0.;
 }
 
-//extern "C" {
 void nrn_extra_scatter_gather(int direction, int tid);
-//} // extern "C"
 
 static double re_init(void* v) {
 	if (cvode_active_) {
@@ -176,10 +171,8 @@ static double nrn_atol(void* v) {
 	}
 	return d->atol();
 }
-//extern "C" {
-	extern Symbol* hoc_get_last_pointer_symbol();
-	extern void hoc_symbol_tolerance(Symbol*, double);
-//} // extern "C"
+extern Symbol* hoc_get_last_pointer_symbol();
+extern void hoc_symbol_tolerance(Symbol*, double);
 
 static double abstol(void* v) {
 	NetCvode* d = (NetCvode*)v;
@@ -525,10 +518,8 @@ static double nrn_diam_change_count(void* v) {
 	return double(diam_change_cnt);
 }
 
-//extern "C" {
 int (*nrnpy_pysame)(Object*, Object*);
 extern int (*nrnpy_hoccommand_exec)(Object*);
-//} // extern "C"
 
 declarePtrList(ExtraScatterList, Object)
 implementPtrList(ExtraScatterList, Object)

@@ -9,9 +9,6 @@ saves the pointtype as later argument to create and loc */
 #include "membfunc.h"
 #include "parse.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern char* pnt_map;
 extern Symbol** pointsym; /*list of variable symbols in s->u.ppsym[k]
@@ -412,6 +409,3 @@ int is_point_process(Object* ob)
 	return 0;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

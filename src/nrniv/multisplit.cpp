@@ -10,7 +10,6 @@
 #include <nrnhash.h>
 #include <multisplit.h>
 
-//extern "C" {
 void nrnmpi_multisplit(Section*, double x, int sid, int backbone_style);
 int nrn_multisplit_active_;
 
@@ -54,7 +53,6 @@ static void nrnmpi_wait(void**){}
 static void nrnmpi_barrier(){}
 static double nrnmpi_wtime() { return 0.0; }
 #endif
-//} // extern "C"
 
 class MultiSplit;
 class MultiSplitControl;
@@ -2061,7 +2059,6 @@ nrnmpi_myid, i, mt.displ_, mt.size_, mt.host_, tag);
 //if (nrnmpi_myid == 4) {
 printf("%d send to %d nnode=%d nnode_rt=%d size=%d tag=%d\n",
 nrnmpi_myid, mt.host_, mt.nnode_, mt.nnode_rt_, mt.size_, mt.tag_);
-//} // extern "C"
 #endif
 #if 0
 //if (nrnmpi_myid == 4) {
@@ -2074,7 +2071,6 @@ nrnmpi_myid, mt.host_, 2*j, tbuf[2*j], 2*j+1, tbuf[2*j+1], mt.nodeindex_[j]);
 printf("%d send to %d offdiag tbuf[%d] = %g\n",
 nrnmpi_myid, mt.host_, jj, tbuf[jj]);
 		}
-//} // extern "C"
 #endif
 	}
 
@@ -2266,7 +2262,6 @@ nrnmpi_myid, i, mt.displ_, mt.size_, mt.host_, tag);
 //if (nrnmpi_myid == 4) {
 printf("%d send to %d nnode=%d nnode_rt=%d size=%d tag=%d\n",
 nrnmpi_myid, mt.host_, mt.nnode_, mt.nnode_rt_, mt.size_, mt.tag_);
-//} // extern "C"
 #endif
 #if 0
 //if (nrnmpi_myid == 4) {
@@ -2279,7 +2274,6 @@ nrnmpi_myid, mt.host_, 2*j, tbuf[2*j], 2*j+1, tbuf[2*j+1], mt.nodeindex_[j]);
 printf("%d send to %d offdiag tbuf[%d] = %g\n",
 nrnmpi_myid, mt.host_, jj, tbuf[jj]);
 		}
-//} // extern "C"
 #endif
 	}
 

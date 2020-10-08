@@ -352,9 +352,6 @@ if (nrn_inpython_) {
 
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern void class2oc(const char *,
                      void *(*cons)(Object *),
@@ -365,9 +362,6 @@ extern void class2oc(const char *,
                      Member_ret_str_func *
 );
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 void SectionRef_reg(void) {
 	Symbol* s, *sr; //, *hoc_table_lookup();

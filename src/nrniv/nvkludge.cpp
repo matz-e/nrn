@@ -13,16 +13,12 @@
 
 #include "oc2iv.h"
 #include "scoplib_ansi.h"
-//extern "C" {
 extern double (*nrnpy_guigetval)(Object*);
 extern void (*nrnpy_guisetval)(Object*, double);
 extern int (*nrnpy_guigetstr)(Object*, char**);
-//} // extern "C"
 
 #if defined(CYGWIN)
-//extern "C" {
 extern int ncyg_fprintf();
-//} // extern "C"
 #endif
 #if NRNMPI
 

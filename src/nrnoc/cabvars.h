@@ -4,9 +4,6 @@
 #define XMECH 0
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 static struct {		/* USERPROPERTY */
 	char	*name;
@@ -89,9 +86,6 @@ extern void morph_alloc(Prop*);
 	NULL_CUR, cab_alloc, NULL_STATE, NULL_INITIALIZE, (Pfri)0, 0,	/*CABLESECTION*/
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 extern Memb_func* memb_func;
 

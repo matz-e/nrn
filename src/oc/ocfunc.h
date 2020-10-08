@@ -1,9 +1,6 @@
 #ifndef ocfunc_h
 #define ocfunc_h
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern double hoc_Log(double), hoc_Log10(double), hoc1_Exp(double), hoc_Sqrt(double), hoc_integer(double);
 extern double hoc_Pow(double, double);
@@ -46,9 +43,6 @@ extern void hoc_settext(void);
 extern void hoc_win_exec();
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif  
 

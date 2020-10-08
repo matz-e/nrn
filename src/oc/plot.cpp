@@ -1,9 +1,6 @@
 #include <../../nrnconf.h>
 #include "hoc.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 /*LINTLIBRARY*/
 #undef IGNORE
@@ -1196,6 +1193,3 @@ hoc_NeXTplot(mode, x, y)
 }
 #endif /*NeXTstep*/
 
-//#if defined(__cplusplus)
-//}
-//#endif

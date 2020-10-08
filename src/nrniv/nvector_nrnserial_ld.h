@@ -63,9 +63,6 @@ mv temp nvector_nrnserial_ld.cpp
 #ifndef _NVECTOR_NRNSERIAL_LD_H
 #define _NVECTOR_NRNSERIAL_LD_H
 
-//#ifdef __cplusplus  /* wrapper to enable C++ usage */
-//extern "C" {
-//#endif
 
 #include "nvector.h"
 #include "sundialstypes.h"
@@ -284,8 +281,5 @@ booleantype N_VInvTest_NrnSerialLD(N_Vector x, N_Vector z);
 booleantype N_VConstrMask_NrnSerialLD(N_Vector c, N_Vector x, N_Vector m);
 realtype N_VMinQuotient_NrnSerialLD(N_Vector num, N_Vector denom);
 
-//#ifdef __cplusplus
-//}
-//#endif
 
 #endif

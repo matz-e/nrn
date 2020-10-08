@@ -21,9 +21,6 @@
 #include "nrnfilewrap.h"
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #if CABLE
 #include "options.h"
@@ -2669,6 +2666,3 @@ void execute(Inst *p)    /* run the machine */
     }
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

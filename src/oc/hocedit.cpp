@@ -64,9 +64,6 @@ hocedit.c,v
 #include <hocparse.h>
 #include <setjmp.h>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #if MAC
 #define OCSMALL 1
@@ -237,6 +234,3 @@ char* hoc_pipegets(char* cbuf, int nc) {
 }
 
 
-//#if defined(__cplusplus)
-//}
-//#endif

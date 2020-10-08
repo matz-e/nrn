@@ -36,9 +36,6 @@ int parallel_val; /* for use with parallel neuron (see hoc.cpp) */
 */
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 void hoc_parallel_begin(void) {
 #if !OCSMALL
@@ -160,9 +157,6 @@ void hoc_parallel_end(void) {
 #endif
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 int parallel_hoc_main(int i) {
 #if !OCSMALL

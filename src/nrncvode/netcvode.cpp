@@ -59,7 +59,6 @@ typedef void (*ReceiveFunc)(Point_process*, double*, double);
 // needs to be fired to execute the NET_RECEIVE block.
 //#define POINT_RECEIVE(type, tar, w, f) ns->point_receive(type, tar, w, f)
 
-//extern "C" {
 #include "membfunc.h"
 extern void single_event_run();
 extern void setup_topology(), v_setup_vectors();
@@ -238,7 +237,6 @@ void nrn2ncs_netcons();
 #if NRNMPI
 extern void nrn2ncs_outputevent(int netcon_output_index, double firetime);
 #endif
-//} // extern "C"; extern "C"
 
 #if BGPDMA
 extern void bgp_dma_send(PreSyn*, double t);
@@ -4064,12 +4062,10 @@ extern "C" void _nrn_free_fornetcon(void** v) {
 	}
 }	
 
-//extern "C" {
 void record_init_clear(const TQItem* q, int) {
 	DiscreteEvent* d = (DiscreteEvent*)q->data_;
 	d->frecord_init((TQItem*)q);
 }
-//} // extern "C";
 
 void NetCvode::record_init() {
 	int i, cnt = prl_->count();

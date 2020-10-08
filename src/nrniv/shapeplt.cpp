@@ -38,17 +38,13 @@
 #define ShapePlot_		"ShapePlot PlotShape"
 #define MoveText_		"MoveText PlotShape"
 
-//extern "C" {
-	extern Symlist* hoc_built_in_symlist;
-//} // extern "C"
+extern Symlist* hoc_built_in_symlist;
 #endif // HAVE_IV
 
-//extern "C" {
-	extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
-	extern double (*nrnpy_object_to_double_)(Object*);
-	void* (*nrnpy_get_pyobj)(Object* obj) = 0;
-	void (*nrnpy_decref)(void* pyobj) = 0;
-//} // extern "C"
+extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
+extern double (*nrnpy_object_to_double_)(Object*);
+void* (*nrnpy_get_pyobj)(Object* obj) = 0;
+void (*nrnpy_decref)(void* pyobj) = 0;
 
 // PlotShape class registration for oc
 static double sh_flush(void* v) {

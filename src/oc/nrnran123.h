@@ -25,9 +25,6 @@ http://www.deshawresearch.com/resources_random123.html
 
 #include <inttypes.h>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 typedef struct nrnran123_State nrnran123_State;
 
@@ -69,8 +66,5 @@ extern nrnran123_array4x32 nrnran123_iran(uint32_t seq, uint32_t id1, uint32_t i
 extern nrnran123_array4x32 nrnran123_iran3(uint32_t seq, uint32_t id1, uint32_t id2, uint32_t id3);
 extern double nrnran123_uint2dbl(uint32_t);
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif

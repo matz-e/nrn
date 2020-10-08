@@ -17,9 +17,6 @@
 #include    "nrnjava.h"
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 extern jmp_buf		begin;
@@ -952,7 +949,4 @@ int Fprintf(FILE* stream, const char *fmt, ...) {
   return n;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 

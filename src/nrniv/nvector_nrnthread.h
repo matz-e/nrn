@@ -56,9 +56,6 @@
 #ifndef _NVECTOR_NRNTHREAD_H
 #define _NVECTOR_NRNTHREAD_H
 
-//#ifdef __cplusplus  /* wrapper to enable C++ usage */
-//extern "C" {
-//#endif
 
 #include "nvector.h"
 #include "sundialstypes.h"
@@ -292,8 +289,5 @@ booleantype N_VInvTest_NrnThread(N_Vector x, N_Vector z);
 booleantype N_VConstrMask_NrnThread(N_Vector c, N_Vector x, N_Vector m);
 realtype N_VMinQuotient_NrnThread(N_Vector num, N_Vector denom);
 
-//#ifdef __cplusplus
-//} // extern "C"
-//#endif
 
 #endif

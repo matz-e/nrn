@@ -73,9 +73,6 @@ extern double chkarg(); // , *hoc_pgetarg();
 extern int use_mcell_ran4_;
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 void hoc_mcran4() {
 	uint32_t idx;
 	double* xidx;
@@ -105,9 +102,6 @@ void hoc_usemcran4() {
 	hoc_ret();
 	hoc_pushx(prev);
 }
-//#if defined(__cplusplus)
-//}
-//#endif
 
 extern "C" uint32_t nrnRan4int(uint32_t* idx1, uint32_t idx2)
 {

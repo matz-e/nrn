@@ -20,10 +20,8 @@ static struct tms tmsbuf, tms_start_;
 static clock_t starttime;
 #endif
 
-//extern "C" {
-	extern int nrn_global_argc;
-	extern char** nrn_global_argv;
-//} // extern "C"
+extern int nrn_global_argc;
+extern char** nrn_global_argv;
 
 bool BBSImpl::is_master_ = false;
 bool BBSImpl::started_ = false;

@@ -22,9 +22,6 @@ extern int nrn_nobanner_;
 extern int ivocmain(int, const char**, const char**);
 extern int nrn_main_launch;
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 // int nrn_global_argc;
 extern char** nrn_global_argv;
@@ -276,6 +273,3 @@ extern "C" void inithoc() {
 extern "C" void modl_reg() {}
 #endif // !defined(CYGWIN)
 //
-//#if defined(__cplusplus)
-//}
-//#endif

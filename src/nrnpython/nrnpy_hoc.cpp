@@ -38,7 +38,6 @@ typedef struct {
   PyObject* cell_;
 } NPySecObj;
 
-//extern "C" {
 
 #include "parse.h"
 extern void (*nrnpy_sectionlist_helper_)(void*, Object*);
@@ -132,9 +131,7 @@ static const char* hocobj_docstring =
     "class neuron.hoc.HocObject - Hoc Object wrapper";
 
 #if 1
-//} // extern "C"
 #include <hoccontext.h>
-//extern "C" {
 #else
 extern Object* hoc_thisobject;
 #define HocTopContextSet \
@@ -3095,4 +3092,3 @@ fail:
   return;
 #endif
 }
-//} // extern "C"

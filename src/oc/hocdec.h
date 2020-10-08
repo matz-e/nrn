@@ -4,9 +4,6 @@
 #define	INCLUDEHOCH	1
 #define OOP 1
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 #include    <stdio.h>
 #include	"nrnapi.h"
@@ -364,8 +361,5 @@ int node_num;
 int mytid;
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif

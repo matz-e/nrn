@@ -24,9 +24,7 @@ static double inside(void*) {
 		*getarg(5), *getarg(6));
 }
 
-//extern "C" {
-    int nrn_feround(int);
-//} // extern "C"
+int nrn_feround(int);
 // return last rounding mode and set to given mode if 1,2,3,4.
 // order is FE_DOWNWARD, FE_TONEAREST, FE_TOWARDZERO, FE_UPWARD
 #if defined(HAVE_FENV_H) && defined(HAVE_FESETROUND)

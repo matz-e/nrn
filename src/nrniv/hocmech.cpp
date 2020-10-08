@@ -5,7 +5,6 @@
 #include "nrnoc2iv.h"
 #include "nrniv_mf.h"
 
-//extern "C" {
 #include "parse.h"
 extern int point_reg_helper(Symbol*);
 extern Object* hoc_newobj1(Symbol*, int);
@@ -24,7 +23,6 @@ extern void make_mechanism();
 extern void make_pointprocess();
 extern void hoc_construct_point(Object*, int);
 extern Object* hoc_new_opoint(int);
-//} // extern "C"
 
 static Object* last_created_pp_ob_;
 static bool skip_;

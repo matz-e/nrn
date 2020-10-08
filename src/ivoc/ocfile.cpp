@@ -39,10 +39,8 @@ extern /*"C"*/ int hoc_return_type_code;
 #endif
 
 #include "gui-redirect.h"
-//extern "C" {
-	extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
-	extern double (*nrnpy_object_to_double_)(Object*);
-//} // extern "C"
+extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
+extern double (*nrnpy_object_to_double_)(Object*);
 
 
 static Symbol* file_class_sym_;
@@ -52,10 +50,8 @@ int ivoc_unlink(const char* s) {
 	return unlink(s);
 }
 
-//extern "C" {
-    #include "hocstr.h"
-	extern "C" FILE* hoc_obj_file_arg(int i);
-//} // extern "C"
+#include "hocstr.h"
+extern "C" FILE* hoc_obj_file_arg(int i);
 
 extern "C" FILE* hoc_obj_file_arg(int i) {
 	Object* ob = *hoc_objgetarg(i);

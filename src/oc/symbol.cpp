@@ -450,9 +450,6 @@ extern "C" unsigned long long nrn_mallinfo(int item) {
 #endif
 }
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 int hoc_mallinfo(void) {
     int i;
     unsigned long long x;
@@ -464,7 +461,4 @@ int hoc_mallinfo(void) {
     return 0;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 	

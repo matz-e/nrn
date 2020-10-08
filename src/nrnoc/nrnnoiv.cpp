@@ -6,9 +6,6 @@
 #include "nrndae_c.h"
 #include "gui-redirect.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern Object **(*nrnpy_gui_helper_)(const char *name, Object *obj);
 
@@ -238,6 +235,3 @@ void nrnmusic_init(int* parg, char*** pargv){}
 void nrnmusic_terminate(){}
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif

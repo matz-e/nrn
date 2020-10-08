@@ -4,9 +4,6 @@
 /* too many time char* buf overruns its storage */
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 typedef struct HocStr {
 	char* buf;
@@ -19,8 +16,5 @@ extern void hocstr_delete(HocStr*);
 void hocstr_resize(HocStr*, size_t);
 void hocstr_copy(HocStr*, const char*);
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif

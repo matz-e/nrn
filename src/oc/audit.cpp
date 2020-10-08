@@ -5,9 +5,6 @@
 #include <hocdec.h>
 #include "hocassrt.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 static int doaudit;
 static FILE* faudit;
@@ -310,6 +307,3 @@ void hoc_emacs_from_audit(void) {
 #endif
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

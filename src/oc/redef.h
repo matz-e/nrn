@@ -4,9 +4,6 @@
 #define hoc_redef_h
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 # define	Break	hoc_Break
@@ -143,8 +140,5 @@
 # define	xopen	hoc_xopen
 # define	zzdebug	hoc_zzdebug
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif

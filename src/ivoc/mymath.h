@@ -4,9 +4,7 @@
 #include <OS/math.h>
 #include <InterViews/geometry.h>
 
-//extern "C" {
 extern "C" int nrn_isdouble(double*, double, double);
-//} // extern "C"
 
 class Extension;
 

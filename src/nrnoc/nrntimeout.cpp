@@ -1,9 +1,6 @@
 #include <../../nrnconf.h>
 #include <nrnmpi.h>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #if NRNMPI
 #if defined(HAVE_SETITIMER) && defined(HAVE_SIGACTION)
@@ -87,6 +84,3 @@ void nrn_timeout(int seconds) { }
 
 #endif /*NRNMPI*/
 
-//#if defined(__cplusplus)
-//}
-//#endif

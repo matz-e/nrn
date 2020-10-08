@@ -1,6 +1,3 @@
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern void node_data(), disconnect();
 extern void batch_run(), batch_save();
@@ -187,6 +184,3 @@ static struct {  /* triple dimensioned arrays */
 0, 0, 0, 0, 0
 };
 
-//#if defined(__cplusplus)
-//}
-//#endif

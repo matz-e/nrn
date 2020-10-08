@@ -4,9 +4,6 @@
 #include <nrnpthread.h>
 #include <nrnmpi.h>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 /*
 Now that threads have taken over the actual_v, v_node, etc, it might
@@ -1306,6 +1303,3 @@ int nrn_how_many_processors() {
 #endif
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

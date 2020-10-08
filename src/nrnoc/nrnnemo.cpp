@@ -3,9 +3,6 @@
 #include "section.h"
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #define OBSOLETE 1
 
@@ -240,6 +237,3 @@ static void dat_head(void)
 
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif

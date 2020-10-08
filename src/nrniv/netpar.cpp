@@ -43,7 +43,6 @@ static double t_exchange_;
 static double dt1_; // 1/dt
 static void alloc_space();
 
-//extern "C" {
 extern NetCvode* net_cvode_instance;
 extern double t, dt;
 extern int cvode_active_;
@@ -96,7 +95,6 @@ double nrn_bgp_receive_time(int) { return 0.; }
 extern void nrnmpi_split_clear();
 #endif
 extern void nrnmpi_multisplit_clear();
-//} // extern "C"
 
 static double set_mindelay(double maxdelay);
 
@@ -104,7 +102,6 @@ static double set_mindelay(double maxdelay);
 
 #include "../nrnmpi/mpispike.h"
 
-//extern "C" {
 void nrn_timeout(int);
 void nrn_spike_exchange(NrnThread*);
 extern int nrnmpi_int_allmax(int);
@@ -112,7 +109,6 @@ extern void nrnmpi_int_allgather(int*, int*, int);
 void nrn2ncs_outputevent(int netcon_output_index, double firetime);
 bool nrn_use_compress_; // global due to bbsavestate
 #define use_compress_ nrn_use_compress_
-//} // extern "C"
 
 #ifdef USENCS
 extern int ncs_bgp_sending_info( int ** );
@@ -1564,7 +1560,6 @@ void nrn_gidout_iter(PFIO callback) {
 }
 
 #include "nrncore_write.h"
-//extern "C" {
 extern int* nrn_prop_param_size_;
 extern int* pnt_receive_size;
 extern short* nrn_is_artificial_;
@@ -1648,5 +1643,4 @@ void nrncore_netpar_cellgroups_helper(CellGroup* cgs) {
   delete [] gidcnt;
 }
 
-// } // extern "C"
 

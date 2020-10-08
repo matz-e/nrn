@@ -9,9 +9,7 @@
 #include "bbssrv.h"
 #include "bbsimpl.h"
 
-//extern "C" {
-	void nrnbbs_context_wait();
-//} // extern "C";
+void nrnbbs_context_wait();
 
 BBSDirectServer* BBSDirectServer::server_;
 

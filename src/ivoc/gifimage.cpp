@@ -8,7 +8,6 @@
 #include <InterViews/image.h>
 #include "oc2iv.h"
 
-//extern "C" {
 
 #define byte unsigned char
 #define True 1
@@ -30,7 +29,6 @@ PICINFO* pinfo_;
 
 static int LoadGIF(const char* fname, PICINFO*);
 
-//} // extern "C" // extern "C"
 
 Image* gif_image(const char* filename) {
 	Image* image;
@@ -43,7 +41,6 @@ Image* gif_image(const char* filename) {
 	return image;
 }
 
-//extern "C" {
 
 /*
  * xvgif.cpp  -  GIF loading code for 'xv'.  Based strongly on...
@@ -808,6 +805,5 @@ static void gifWarning(const char* st)
 }
 
 
-//} // extern "C" //  extern "C"
 
 #endif

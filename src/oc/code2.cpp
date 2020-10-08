@@ -13,9 +13,6 @@
 #include "nrnfilewrap.h"
 #include <cstring>
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 int units_on_flag_;
@@ -751,6 +748,3 @@ void hoc_name_declared(void) {
 	pushx((double)x);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

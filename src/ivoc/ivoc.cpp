@@ -8,10 +8,8 @@
 #include "oc2iv.h"
 #include "ocfunc.h"
 
-//extern "C" {
-	extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
-	extern double (*nrnpy_object_to_double_)(Object*);
-//} // extern "C"
+extern Object** (*nrnpy_gui_helper_)(const char* name, Object* obj);
+extern double (*nrnpy_object_to_double_)(Object*);
 
 #if HAVE_IV
 #include "utility.h"
@@ -41,7 +39,6 @@ static nrn::tool::bimap<double*,Observer*>* pdob;
 
 int nrn_err_dialog_active_;
 
-//extern "C" {
 
 void* (*nrnpy_save_thread)();
 void (*nrnpy_restore_thread)(void*);
@@ -127,12 +124,9 @@ char* cxx_char_alloc(size_t sz) {
   return cp;
 }
 
-//} // extern "C"
 
 #ifndef MINGW // actual implementation in ivocwin.cpp
-//extern "C" {
-    void nrniv_bind_thread(void);
-//} // extern "C"
+void nrniv_bind_thread(void);
 void nrniv_bind_thread() {
 	hoc_pushx(1.);
 	hoc_ret();
@@ -173,7 +167,6 @@ ENDGUI
  * window from which oc was run.
  */
 
-//extern "C" {
 	extern void hoc_main1_init(const char* pname, const char** env);
 	extern int hoc_oc(const char*);
 	extern int hoc_interviews;
@@ -194,18 +187,15 @@ ENDGUI
 
 	extern int hoc_print_first_instance;
 	void ivoc_style();
-//} // extern "C"
 
 // because NEURON can no longer maintain its own copy of dialogs.cpp
 // we communicate with the InterViews version through a callback.
-//extern "C" {
 extern bool (*IVDialog_setAcceptInput)(bool);
 bool setAcceptInputCallback(bool);
 bool setAcceptInputCallback(bool b) {
 	Oc oc;
 	return oc.setAcceptInput(b);
 }
-//} // extern "C"
 
 void ivoc_style() { 
 	TRY_GUI_REDIRECT_DOUBLE("ivoc_style", NULL);
@@ -266,11 +256,9 @@ static HandleStdin* hsd_;
 
 #if defined(WIN32) && !defined(CYGWIN)
 static HandleStdin* hsd_;
-//extern "C" {
 void winio_key_press() {
 	hsd_->inputReady(1);
 }
-//} // extern "C"
 
 #endif
 
@@ -458,9 +446,7 @@ void single_event_run() {
 }
 
 #ifdef MINGW
-//extern "C" {
 extern void nrniv_bind_call(void);
-//} // extern "C"
 #endif
 
 void hoc_notify_iv() {

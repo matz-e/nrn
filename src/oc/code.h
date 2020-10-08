@@ -54,8 +54,5 @@ extern void simpleconnectsection(void), range_interpolate_single(void);
 extern void hoc_sec_internal_push(void);
 /* END NEWCABLE*/
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif

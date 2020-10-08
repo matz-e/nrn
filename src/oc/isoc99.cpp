@@ -8,9 +8,6 @@ Of course this founders in general on the dereferencing of invalid memory
 so it can only be used when pd is valid over sizeof(double).
 */
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern "C" int nrn_isdouble(double *pd, double min, double max) {
     int i;
@@ -27,6 +24,3 @@ extern "C" int nrn_isdouble(double *pd, double min, double max) {
 #endif
 }
 //
-//#if defined(__cplusplus)
-//}
-//#endif

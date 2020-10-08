@@ -50,9 +50,6 @@ xred.cpp,v
 
 #include "hoc.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 /* input a n integer in range > min and < max */
 int ired(const char* prompt, int defalt, int min, int max)
@@ -198,6 +195,3 @@ strstr(cs, ct)
 #endif
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif

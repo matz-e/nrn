@@ -1,9 +1,6 @@
 #ifndef nonvintblock_h
 #define nonvintblock_h
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 /*
 Interface for adding blocks of equations setup and solved in python
@@ -74,8 +71,5 @@ nonvintblock_extern int (*nrn_nonvint_block)(int method, int length, double* pd1
 /* multiply the existing values in y (cvode.atol()) with appropriate scale factors */
 #define nrn_nonvint_block_ode_abstol(size, y, tid) nonvint_block(10, size, y, 0, tid)
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif

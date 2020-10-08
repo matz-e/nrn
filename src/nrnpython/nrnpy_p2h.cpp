@@ -8,7 +8,6 @@
 #include <hoccontext.h>
 #include "nrnpy_utils.h"
 
-//extern "C" {
 #include "parse.h"
 extern void hoc_nopop();
 extern void hoc_pop_defer();
@@ -81,7 +80,6 @@ static hoc_List* dlist;
 extern int nrnpy_site_problem;
 extern int* nrnpy_site_problem_p;
 #endif
-//} // extern "C"
 
 class Py2Nrn {
  public:

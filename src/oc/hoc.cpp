@@ -21,9 +21,6 @@
 #include <go32.h>
 #endif
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 /* for eliminating "ignoreing return value" warnings. */
 int nrnignore;
@@ -1917,6 +1914,3 @@ void hoc_check_intupt(int intupt) {
 }
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif

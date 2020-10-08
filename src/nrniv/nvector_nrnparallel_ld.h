@@ -63,9 +63,6 @@ mv temp nvector_nrnparallel_ld.cpp
 #ifndef _NVECTOR_NRNPARALLEL_LD_H
 #define _NVECTOR_NRNPARALLEL_LD_H
 
-//#ifdef __cplusplus  /* wrapper to enable C++ usage */
-//extern "C" {
-//#endif
 
 #include <nrnmpiuse.h>
 #if NRNMPI_DYNAMICLOAD
@@ -346,8 +343,5 @@ booleantype N_VInvTest_NrnParallelLD(N_Vector x, N_Vector z);
 booleantype N_VConstrMask_NrnParallelLD(N_Vector c, N_Vector x, N_Vector m);
 realtype N_VMinQuotient_NrnParallelLD(N_Vector num, N_Vector denom);
 
-//#ifdef __cplusplus
-//}
-//#endif
 
 #endif

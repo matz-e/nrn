@@ -9,9 +9,6 @@
 #include	"membdef.h"
 #include	"nrniv_mf.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #undef hoc_retpushx
 
@@ -639,6 +636,3 @@ void second_order_cur(NrnThread *nt) {
 
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif

@@ -138,12 +138,6 @@ struct NrnMappingInfo {
 	}
 };
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 void nrn_write_mapping_info(const char *, int, NrnMappingInfo&);
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif // NRN_SECTION_MAPPING

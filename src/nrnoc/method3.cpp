@@ -97,9 +97,6 @@ method3.cpp,v
 #include	<errno.h>
 #include	"section.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 #if METHOD3 && VECTORIZE
 #include	"membfunc.h"
@@ -403,6 +400,3 @@ method3_connection_coef()	/* setup a and b */
 
 #endif
 
-//#if defined(__cplusplus)
-//}
-//#endif

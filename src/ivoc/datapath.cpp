@@ -24,22 +24,17 @@ void GraphVector::record_install(){}
 void GraphVector::record_uninstall(){}
 #endif
 // another hack so ivoc will have these names which nrniv gets elsewhere
-//extern "C" {
 int bbs_poll_;
 void bbs_done(){}
 void bbs_handle(){}
 void nrnbbs_context_wait(){}
-//} // extern "C"
 
 #ifdef WIN32
-//extern "C" {
 void* dll_lookup(struct DLL*, const char*){return NULL;}
 struct DLL* dll_load(const char*){return NULL;}
-//} // extern "C"
 #endif
 #endif
 
-//extern "C" {
 #if CABLE
 #include "nrnoc2iv.h"
 #include "membfunc.h"
@@ -51,7 +46,6 @@ struct DLL* dll_load(const char*){return NULL;}
 extern Symlist* hoc_built_in_symlist;
 extern Symlist* hoc_top_level_symlist;
 extern Objectdata* hoc_top_level_data;
-//} // extern "C"
 
 /*static*/ class PathValue {
 public:

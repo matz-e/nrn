@@ -11,9 +11,6 @@
 
 # define	CHECK(name) nrn_load_name_check(name)
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 static char CHKmes[] = "The user defined name, %s, already exists.\n";
 
@@ -161,6 +158,3 @@ extern "C" void hoc_retpushx(double x) {    /* utility return for user functions
     hoc_pushx(x);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

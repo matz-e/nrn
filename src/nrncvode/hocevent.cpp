@@ -4,9 +4,7 @@
 #include <nrnoc2iv.h>
 #include <mymath.h>
 
-//extern "C" {
 extern int cvode_active_;
-//} // extern "C"
 
 declarePool(HocEventPool, HocEvent)
 implementPool(HocEventPool, HocEvent)

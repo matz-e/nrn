@@ -1,9 +1,6 @@
 #ifndef nrncvode_h
 #define nrncvode_h
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 extern "C" void cvode_fadvance(double);
 extern void cvode_finitialize(double);
@@ -26,8 +23,5 @@ extern void nrn_capacity_current(NrnThread* _nt, Memb_list* ml);
 extern void nrn_spike_exchange_init(void);
 extern void nrn_spike_exchange(NrnThread* nt);
 
-//#if defined(__cplusplus)
-//}
-//#endif
 
 #endif

@@ -9,9 +9,7 @@
 
 #define precision 15
 
-//extern "C" {
 void nrn_prcellstate(int gid, const char* filesuffix);
-//} // extern "C"
 
 declarePtrList(NetConList, NetCon) // NetCons in same order as Point_process
 implementPtrList(NetConList, NetCon) // and there may be several per pp.

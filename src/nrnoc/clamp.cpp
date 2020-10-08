@@ -28,9 +28,6 @@ fclampi()
 #include "section.h"
 #include "nrniv_mf.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 static double loc;
 static Node *pnd;
@@ -220,6 +217,3 @@ static double clampval(void) {
     return vc[oldsw];
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

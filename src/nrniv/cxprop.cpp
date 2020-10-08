@@ -16,7 +16,6 @@ greater cache efficiency
 #include <arraypool.h>
 #include <structpool.h>
 
-//extern "C" {
 extern void nrn_mk_prop_pools(int);
 extern void nrn_cache_prop_realloc();
 extern int nrn_is_ion(int);
@@ -33,7 +32,6 @@ static double* recalc_ptr(double*);
 //void nrn_pool_free(void* pool, void* item);
 //void nrn_pool_freeall(void* pool);
 
-//} // extern "C"
 
 declareArrayPool(CharArrayPool, char)
 implementArrayPool(CharArrayPool, char)

@@ -9,9 +9,6 @@
 #include "code.h"
 
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#
 
 
 int	do_equation;	/* switch for determining access to dep vars */
@@ -324,6 +321,3 @@ void solve(void)
 	pushx(sum);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

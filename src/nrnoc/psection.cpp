@@ -5,9 +5,6 @@
 #include "parse.h"
 #include "membfunc.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 static void pnode(Prop*);
 
@@ -82,7 +79,4 @@ void prstim(void) {
     hoc_retpushx(1.);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
 

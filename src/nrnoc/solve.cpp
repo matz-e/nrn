@@ -60,9 +60,6 @@ node.v + extnode.v[0]
 #include	"membfunc.h"
 #include 	"spmatrix.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 extern int	tree_changed;
@@ -898,6 +895,3 @@ hoc_execerror("A loop exists involving section", secname(sec));
 	assert(order == section_count);
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif

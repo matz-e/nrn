@@ -14,9 +14,6 @@
 #include "membdef.h"
 #include "nrnmpi.h"
 
-//#if defined(__cplusplus)
-//extern "C" {
-//#endif
 
 
 /* change this to correspond to the ../nmodl/nocpout nmodl_version_ string*/
@@ -1031,6 +1028,3 @@ double nrn_call_mech_func(Symbol* s, int narg, Prop* p, int type) {
 	return x;
 }
 
-//#if defined(__cplusplus)
-//}
-//#endif
