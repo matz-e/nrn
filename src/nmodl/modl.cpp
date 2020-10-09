@@ -32,8 +32,6 @@
  * still gives the prefix of the .c and .var files.
  */
 
-#include <regex>
-
 /* the first arg may also be a file.mod (containing the .mod suffix)*/
 #if MAC
 #include <sioux.h>
@@ -303,8 +301,21 @@ void openfiles(int argc, char* argv[])
 #endif
 }
 
+static std::string str_replace(std::string str, const std::string& search_str, const std::string& replace_str)
+{
+    if (search_str.empty()) {
+        return str;
+    }
+
+    size_t pos;
+    while ( (pos = str.find(search_str)) != std::string::npos ) {
+        str.replace(pos, search_str.size(), replace_str);
+    }
+
+    return str;
+}
 
 void verbatim_adjust(char* q) {
-    const std::string repl = std::regex_replace(q, std::regex("u\\.template"), "u.ctemplate");
+    const std::string repl = str_replace(q, "u.template", "u.ctemplate");
     Fprintf(fcout, "%s", repl.c_str());
 }
