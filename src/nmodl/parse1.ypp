@@ -1,5 +1,5 @@
 %{
-/* /local/src/master/nrn/src/nmodl/parse1.y,v 4.11 1999/03/24 18:34:08 hines Exp */
+/* /local/src/master/nrn/src/nmodl/parse1.ypp,v 4.11 1999/03/24 18:34:08 hines Exp */
 
 #include <../../nmodlconf.h>
 #include "modl.h"
@@ -1124,7 +1124,7 @@ factordef: NAME '=' real unit
 		  Lappendstr(firstlist, buf);
 		}
 	| NAME '=' unit unit
-		{Item *q; double d; extern double unit_mag(); //TODO - unit_mag?
+		{Item *q; double d; extern double unit_mag();
 		    Unit_push($3);
 			Unit_push($4); unit_div();
 		    SYM($1)->subtype |= nmodlCONST;

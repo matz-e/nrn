@@ -86,14 +86,20 @@ extern "C" int vector_arg_px(int i, double** p) {
 int vector_capacity(void* v) {return 0;}
 extern "C" void install_vector_method(const char* name, Pfrd_vp f) {}
 extern "C" int vector_instance_px(void* vv, double** px){return 0;}
-void vector_resize(v, n) void* v; int n; {
+void vector_resize(void* v, void* n) {
 	hoc_execerror("implemented in ivoc library", "vector_resize");
 }
 void vector_append(void* vv, double x) {}
 void vector_delete(void* v) {}
 
-void* vector_arg(int i) { return nullptr;}
-void* vector_new2(void* v) { return nullptr;}
+#if defined(__cplusplus)
+class IvocVect;
+#else
+#define IvocVect void
+#endif
+
+IvocVect* vector_arg(int i) { return nullptr;}
+IvocVect* vector_new2(void* v) { return nullptr;}
 Object** vector_pobj(void* v) { return (Object**)0;}
 double* vector_vec(void* v) {
 	hoc_execerror("implemented in ivoc library", "vector_vec");
@@ -104,7 +110,7 @@ extern "C" Object* ivoc_list_item(Object* list, int item) {
 	hoc_execerror("implemented in ivoc library", "ivoc_list_item");
 	return nullptr;
 }
-int ivoc_list_count(list) Object* list; { return 0; }
+int ivoc_list_count(Object* list) { return 0; }
 void bbs_done(void){}
 
 Symbol* ivoc_alias_lookup(const char* name, Object* ob) {return (Symbol*)0;}
@@ -117,4 +123,4 @@ int stdin_event_ready(void) {}
 void nrnbbs_context_wait(void) {}
 void ivoc_final_exit(void) {}
 
-char* cxx_char_alloc(size_t len) { return hoc_Emalloc(len); }
+char* cxx_char_alloc(size_t len) { return static_cast<char *>(hoc_Emalloc(len)); }

@@ -9,7 +9,7 @@
 #include "hoc.h"
 #include "code.h"
 #include "hocstr.h"
-#include "parse.h"
+#include "parse.hpp"
 #include "ocfunc.h"
 #include "ocmisc.h"
 #include "hocparse.h"

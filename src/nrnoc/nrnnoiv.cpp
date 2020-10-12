@@ -96,14 +96,11 @@ int nrndae_list_is_empty(void) { return 0; }
 
 void nrn_solver_prepare() {}
 
-void nrn_fihexec(i)
-int i;
+void nrn_fihexec(int i)
 {
 }
 
-void nrn_deliver_events(tt)
-
-double tt;
+void nrn_deliver_events(double tt)
 {
 }
 
@@ -144,16 +141,13 @@ extern "C" void net_move() { hoc_execerror("net_move only available in nrniv", (
 
 extern "C" void artcell_net_move() { hoc_execerror("net_move only available in nrniv", (char *) 0); }
 
-void nrn_use_daspk(i)
-int i;
+void nrn_use_daspk(int i)
 {
 }
 
 #if CVODE
 
-void cvode_fadvance(t)
-
-double t;
+void cvode_fadvance(double t)
 {
 }
 
@@ -161,9 +155,7 @@ void cvode_finitialize(double t0) {}
 
 void nrncvode_set_t(double tt) {}
 
-void cvode_event(x)
-
-double x;
+void cvode_event(double x)
 {
 }
 
@@ -182,8 +174,8 @@ void _nrn_single_react() {}
 #endif
 
 #if defined(CYGWIN)
-void* dll_lookup(s) char* s; {return 0;}
-void* dll_load(v, s) void* v; char* s; {return 0;}
+void* dll_lookup(char* s) {return 0;}
+void* dll_load(char* v, char* s) {return 0;}
 #endif
 
 void nrn_spike_exchange_init() {}
