@@ -34,6 +34,8 @@ libnrnoc_la_SOURCES = $(MODFILES_C) cabcode.cpp capac.cpp clamp.cpp eion.cpp    
     seclist.cpp method3.cpp hocprax.cpp secref.cpp ldifus.cpp hocusr.cpp nrnversion.cpp \
     nrnversion.h nrntimeout.cpp passive0.cpp
 
+libnrnoc_la_LIBADD = -lpthread
+
 ##
 ## The list of .c files which are actually built during the build procedure.
 ## These files should not be packaged in a distribution.

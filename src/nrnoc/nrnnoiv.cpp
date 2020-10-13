@@ -68,7 +68,7 @@ extern "C" double nrn_random_pick(void *r) { return 0.; }
 
 extern "C" int nrn_random_isran123(void *r, uint32_t *id1, uint32_t *id2, uint32_t *id3) { return 0.; }
 
-void hoc_new_opoint() {}
+void hoc_new_opoint(int) {}
 
 int special_pnt_call(Object *ob, Symbol *sym, int narg) { return 0; }
 
@@ -100,7 +100,7 @@ void nrn_fihexec(int i)
 {
 }
 
-void nrn_deliver_events(double tt)
+void nrn_deliver_events(NrnThread*)
 {
 }
 
@@ -108,9 +108,9 @@ void nrn_record_init() {}
 
 void nrn_play_init() {}
 
-void fixed_record_continuous() {}
+void fixed_record_continuous(NrnThread*) {}
 
-void fixed_play_continuous() {}
+void fixed_play_continuous(NrnThread*) {}
 
 void nrniv_recalc_ptrs() {}
 
@@ -118,7 +118,7 @@ void nrn_recalc_ptrvector() {}
 
 void nrn_extra_scatter_gather(int direction, int tid) {}
 
-void nrn_update_ion_pointer(int type, Datum *d, int i, int j) {}
+extern "C" void nrn_update_ion_pointer(int type, Datum *d, int i, int j) {}
 
 void nrn_update_ps2nt() {}
 
@@ -135,7 +135,7 @@ extern "C" void net_event() { hoc_execerror("net_event only available in nrniv",
 
 extern "C" void net_send() { hoc_execerror("net_send only available in nrniv", (char *) 0); }
 
-void artcell_net_send() { hoc_execerror("net_send only available in nrniv", (char *) 0); }
+extern "C" void artcell_net_send() { hoc_execerror("net_send only available in nrniv", (char *) 0); }
 
 extern "C" void net_move() { hoc_execerror("net_move only available in nrniv", (char *) 0); }
 
@@ -147,7 +147,7 @@ void nrn_use_daspk(int i)
 
 #if CVODE
 
-void cvode_fadvance(double t)
+extern "C" void cvode_fadvance(double t)
 {
 }
 
@@ -163,7 +163,7 @@ extern "C" void clear_event_queue() {}
 
 void init_net_events() {}
 
-void deliver_net_events() {}
+void deliver_net_events(NrnThread*) {}
 
 void hoc_reg_singlechan() {}
 
@@ -194,11 +194,11 @@ void nrn_daq_scanstart() {}
 
 void nrn_multisplit_ptr_update() {}
 
-void nrn_multisplit_bksub() { assert(0); }
+void nrn_multisplit_bksub(NrnThread*) { assert(0); }
 
-void nrn_multisplit_reduce_solve() { assert(0); }
+void nrn_multisplit_reduce_solve(NrnThread*) { assert(0); }
 
-void nrn_multisplit_triang() { assert(0); }
+void nrn_multisplit_triang(NrnThread*) { assert(0); }
 
 #if 1 || PARANEURON
 
@@ -207,6 +207,8 @@ double *nrn_classicalNodeA(Node *n) { return (double *) 0; }
 double *nrn_classicalNodeB(Node *n) { return (double *) 0; }
 
 #endif
+
+extern "C" {
 
 void *nrn_pool_create(long count, int itemsize) {
     assert(0);
@@ -220,6 +222,8 @@ void nrn_pool_freeall(void *pool) { assert(0); }
 void *nrn_pool_alloc(void *pool) {
     assert(0);
     return nullptr;
+}
+
 }
 
 #if NRN_MUSIC
